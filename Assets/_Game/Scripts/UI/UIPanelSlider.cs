@@ -207,6 +207,23 @@ namespace Game.UI
                 return;
             }
 
+            // Band layout (battle/village): no fade over magenta key; card sits in upper free area.
+            if (BattleViewportLayout.IsBandLayoutScene())
+            {
+                UIPanelSlider bandSlider = EnsureOn(root);
+                if (bandSlider != null)
+                {
+                    bandSlider.ShowImmediate();
+                }
+                else
+                {
+                    root.SetActive(true);
+                }
+
+                BattleViewportLayout.ApplyUpperBandCard(root.transform);
+                return;
+            }
+
             UIPanelSlider slider = root.GetComponent<UIPanelSlider>();
             if (slider != null)
             {
@@ -222,6 +239,21 @@ namespace Game.UI
             GameObject target = root != null ? root : fallback;
             if (target == null)
             {
+                return;
+            }
+
+            if (BattleViewportLayout.IsBandLayoutScene())
+            {
+                UIPanelSlider bandSlider = target.GetComponent<UIPanelSlider>();
+                if (bandSlider != null)
+                {
+                    bandSlider.HideImmediate();
+                }
+                else
+                {
+                    target.SetActive(false);
+                }
+
                 return;
             }
 

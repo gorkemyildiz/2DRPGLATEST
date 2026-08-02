@@ -5,33 +5,51 @@ using UnityEngine.UI;
 namespace Game.UI
 {
     /// <summary>
-    /// BattleDemo layout: 960×960 canvas, live battle locked to the bottom 320px band.
-    /// Upper band clears to the desktop color-key so Windows builds show the real desktop behind UI.
+    /// Shared 960×960 layout for BattleDemo and VillageHub:
+    /// live world/HUD in the bottom 320px band, magenta-cleared upper band for desktop see-through,
+    /// overlay cards (inventory, map, craft, …) centered in the upper free area.
     /// </summary>
     [DisallowMultipleComponent]
     public class BattleViewportLayout : MonoBehaviour
     {
         public const float CanvasSize = 960f;
-        public const float BattleHeight = 320f;
+        public const float BandHeight = 320f;
 
-        [Header("Battle camera")]
-        [SerializeField] private Camera battleCamera;
+        /// <summary>Legacy alias used by battle HUD helpers.</summary>
+        public const float BattleHeight = BandHeight;
+
+        [Header("World camera")]
+        [SerializeField] private Camera worldCamera;
 
         [Header("Upper band")]
         [SerializeField] private Image upperBandImage;
 
-        private const string UpperClearCameraName = "BattleUpperClearCamera";
+        private const string UpperClearCameraName = "GameUpperClearCamera";
         private Camera upperClearCamera;
 
-        [Header("Battle HUD")]
+        [Header("Bottom-band roots")]
         [SerializeField] private RectTransform battleMenu;
+        [SerializeField] private RectTransform hubMenu;
         [SerializeField] private RectTransform topPanel;
         [SerializeField] private RectTransform levelUpPanel;
         [SerializeField] private RectTransform lootPopup;
         [SerializeField] private RectTransform battleResultPanel;
 
-        public static float BattleHeightNormalized => BattleHeight / CanvasSize;
-        public static float UpperBandHeightNormalized => 1f - BattleHeightNormalized;
+        public static float BandHeightNormalized => BandHeight / CanvasSize;
+        public static float BattleHeightNormalized => BandHeightNormalized;
+        public static float UpperBandHeightNormalized => 1f - BandHeightNormalized;
+
+        /// <summary>
+        /// Card Y on a full-stretch centered canvas (Y ∈ [-480,480]).
+        /// Upper band midpoint above the 320px world band.
+        /// </summary>
+        public static float UpperBandCardAnchoredY => 160f;
+
+        public static bool IsBandLayoutScene()
+        {
+            string name = SceneManager.GetActiveScene().name;
+            return name == Game.Core.GameScenes.Battle || name == Game.Core.GameScenes.Hub;
+        }
 
         public static BattleViewportLayout FindOrCreate()
         {
@@ -59,6 +77,28 @@ namespace Game.UI
             return layout;
         }
 
+        /// <summary>
+        /// Moves Card / AdventureCard into the upper free band (same as battle inventory).
+        /// </summary>
+        public static void ApplyUpperBandCard(Transform panelRoot)
+        {
+            if (!IsBandLayoutScene() || panelRoot == null)
+            {
+                return;
+            }
+
+            RectTransform cardRt = FindOverlayCard(panelRoot);
+            if (cardRt == null)
+            {
+                return;
+            }
+
+            Vector2 pos = cardRt.anchoredPosition;
+            pos.y = UpperBandCardAnchoredY;
+            cardRt.anchoredPosition = pos;
+            cardRt.localScale = Vector3.one;
+        }
+
         private void Awake()
         {
             EnsureApplied();
@@ -71,7 +111,7 @@ namespace Game.UI
 
         private void LateUpdate()
         {
-            if (SceneManager.GetActiveScene().name != Game.Core.GameScenes.Battle)
+            if (!IsBandLayoutScene())
             {
                 return;
             }
@@ -94,7 +134,7 @@ namespace Game.UI
 
         public void EnsureApplied()
         {
-            if (SceneManager.GetActiveScene().name != Game.Core.GameScenes.Battle)
+            if (!IsBandLayoutScene())
             {
                 return;
             }
@@ -108,9 +148,8 @@ namespace Game.UI
             ApplyCameraRect();
             EnsureUpperClearCamera();
             EnsureUpperBandBackground();
-            LayoutBattleHudBand();
+            LayoutBottomHudBand();
 
-            // Magenta upper-band pixels become see-through to the desktop (Windows player only).
             Game.Core.DesktopTransparency.Enable();
         }
 
@@ -135,15 +174,20 @@ namespace Game.UI
 
         private void ResolveRefs()
         {
-            if (battleCamera == null)
+            if (worldCamera == null)
             {
-                battleCamera = Camera.main;
+                worldCamera = Camera.main;
             }
 
             Transform canvas = transform;
             if (battleMenu == null)
             {
                 battleMenu = FindRect(canvas, "BattleMenu");
+            }
+
+            if (hubMenu == null)
+            {
+                hubMenu = FindRect(canvas, "HubMenu");
             }
 
             if (topPanel == null)
@@ -178,29 +222,34 @@ namespace Game.UI
 
         private void ApplyCameraRect()
         {
-            if (battleCamera == null)
+            if (worldCamera == null)
             {
-                battleCamera = Camera.main;
+                worldCamera = Camera.main;
             }
 
-            if (battleCamera == null)
+            if (worldCamera == null)
             {
                 return;
             }
 
-            // Bottom 320px only.
-            battleCamera.rect = new Rect(0f, 0f, 1f, BattleHeightNormalized);
+            worldCamera.rect = new Rect(0f, 0f, 1f, BandHeightNormalized);
         }
 
-        /// <summary>
-        /// Clears the upper viewport to the chroma-key color every frame.
-        /// Prevents inventory ghosts and marks that region as desktop-transparent in Windows builds.
-        /// </summary>
         private void EnsureUpperClearCamera()
         {
             if (upperClearCamera == null)
             {
                 GameObject existing = GameObject.Find(UpperClearCameraName);
+                if (existing == null)
+                {
+                    // Migrate old battle-only name if present.
+                    existing = GameObject.Find("BattleUpperClearCamera");
+                    if (existing != null)
+                    {
+                        existing.name = UpperClearCameraName;
+                    }
+                }
+
                 if (existing != null)
                 {
                     upperClearCamera = existing.GetComponent<Camera>();
@@ -213,8 +262,8 @@ namespace Game.UI
                 upperClearCamera = go.AddComponent<Camera>();
             }
 
-            float battleDepth = battleCamera != null ? battleCamera.depth : 0f;
-            upperClearCamera.depth = battleDepth - 1f;
+            float depth = worldCamera != null ? worldCamera.depth : 0f;
+            upperClearCamera.depth = depth - 1f;
             upperClearCamera.clearFlags = CameraClearFlags.SolidColor;
             upperClearCamera.backgroundColor = Game.Core.DesktopTransparency.KeyColorUnity;
             upperClearCamera.cullingMask = 0;
@@ -224,7 +273,7 @@ namespace Game.UI
             upperClearCamera.farClipPlane = 10f;
             upperClearCamera.allowHDR = false;
             upperClearCamera.allowMSAA = false;
-            upperClearCamera.rect = new Rect(0f, BattleHeightNormalized, 1f, UpperBandHeightNormalized);
+            upperClearCamera.rect = new Rect(0f, BandHeightNormalized, 1f, UpperBandHeightNormalized);
             upperClearCamera.enabled = true;
         }
 
@@ -240,21 +289,27 @@ namespace Game.UI
                 }
             }
 
-            // No opaque UI fill — that blocked desktop transparency (black void).
-            // Clear camera paints the key color; Overlay inventory/UI draws on top.
             if (upperBandImage != null)
             {
                 upperBandImage.enabled = false;
             }
         }
 
-        private void LayoutBattleHudBand()
+        private void LayoutBottomHudBand()
         {
-            LayoutBottomBand(battleMenu, BattleHeight);
-            LayoutBottomBand(topPanel, 44f, sitOnTopOfBand: true);
-            LayoutCenteredInBand(lootPopup, 420f, 200f);
-            LayoutCenteredInBand(levelUpPanel, 420f, 200f);
-            LayoutCenteredInBand(battleResultPanel, 420f, 220f);
+            string scene = SceneManager.GetActiveScene().name;
+            if (scene == Game.Core.GameScenes.Battle)
+            {
+                LayoutBottomBand(battleMenu, BandHeight);
+                LayoutBottomBand(topPanel, 44f, sitOnTopOfBand: true);
+                LayoutCenteredInBand(lootPopup, 420f, 200f);
+                LayoutCenteredInBand(levelUpPanel, 420f, 200f);
+                LayoutCenteredInBand(battleResultPanel, 420f, 220f);
+            }
+            else if (scene == Game.Core.GameScenes.Hub)
+            {
+                LayoutBottomBand(hubMenu, BandHeight);
+            }
         }
 
         private static void LayoutBottomBand(RectTransform rt, float height, bool sitOnTopOfBand = false)
@@ -270,7 +325,7 @@ namespace Game.UI
                 rt.anchorMax = new Vector2(1f, 0f);
                 rt.pivot = new Vector2(0.5f, 1f);
                 rt.sizeDelta = new Vector2(0f, height);
-                rt.anchoredPosition = new Vector2(0f, BattleHeight);
+                rt.anchoredPosition = new Vector2(0f, BandHeight);
             }
             else
             {
@@ -295,8 +350,37 @@ namespace Game.UI
             rt.anchorMax = new Vector2(0.5f, 0f);
             rt.pivot = new Vector2(0.5f, 0.5f);
             rt.sizeDelta = new Vector2(width, height);
-            rt.anchoredPosition = new Vector2(0f, BattleHeight * 0.5f);
+            rt.anchoredPosition = new Vector2(0f, BandHeight * 0.5f);
             rt.localScale = Vector3.one;
+        }
+
+        private static RectTransform FindOverlayCard(Transform panelRoot)
+        {
+            Transform card = panelRoot.Find("Card");
+            if (card == null)
+            {
+                card = panelRoot.Find("AdventureCard");
+            }
+
+            if (card == null)
+            {
+                Transform[] all = panelRoot.GetComponentsInChildren<Transform>(true);
+                for (int i = 0; i < all.Length; i++)
+                {
+                    if (all[i] == null || all[i] == panelRoot)
+                    {
+                        continue;
+                    }
+
+                    if (all[i].name == "Card" || all[i].name == "AdventureCard")
+                    {
+                        card = all[i];
+                        break;
+                    }
+                }
+            }
+
+            return card as RectTransform;
         }
 
         private static RectTransform FindRect(Transform root, string name)

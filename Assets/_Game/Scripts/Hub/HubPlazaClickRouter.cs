@@ -51,6 +51,15 @@ namespace Game.Hub
             }
 
             Vector3 screen = GetPointerScreenPosition();
+
+            // Ignore clicks outside the bottom world band (transparent upper area).
+            Rect pixelRect = worldCamera.pixelRect;
+            if (screen.x < pixelRect.xMin || screen.x > pixelRect.xMax ||
+                screen.y < pixelRect.yMin || screen.y > pixelRect.yMax)
+            {
+                return;
+            }
+
             Vector3 world = worldCamera.ScreenToWorldPoint(screen);
             Vector2 point = new Vector2(world.x, world.y);
 
@@ -117,8 +126,7 @@ namespace Game.Hub
                     go.GetComponentInParent<Game.UI.CraftPanelUI>() != null ||
                     go.GetComponentInParent<Game.UI.BuildingPanelUI>() != null ||
                     go.GetComponentInParent<Game.UI.VillagePanelUI>() != null ||
-                    go.GetComponentInParent<Game.UI.EnhancePanelUI>() != null ||
-                    go.GetComponentInParent<Game.UI.BuildPanelUI>() != null)
+                    go.GetComponentInParent<Game.UI.EnhancePanelUI>() != null)
                 {
                     return true;
                 }

@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 232369b8c04046f0a6882c5c43debc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleCamera: {fileID: 0}
+  worldCamera: {fileID: 0}
   upperBandImage: {fileID: 0}
   battleMenu: {fileID: 0}
   topPanel: {fileID: 0}

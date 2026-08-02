@@ -35,6 +35,8 @@ namespace Game.Hub
 
         private void Start()
         {
+            Game.UI.BattleViewportLayout.FindOrCreate();
+
             Game.Save.GameSaveController.LoadGameIfNeeded();
             ResolveRefs();
 

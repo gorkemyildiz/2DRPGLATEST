@@ -397,54 +397,19 @@ namespace Game.UI
             TrySeedDemoItems();
             isOpen = true;
             GameObject root = panelRoot != null ? panelRoot : gameObject;
-            // Skip fade in battle: CanvasGroup alpha over magenta key flashes pink.
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Game.Core.GameScenes.Battle)
-            {
-                UIPanelSlider slider = UIPanelSlider.EnsureOn(root);
-                if (slider != null)
-                {
-                    slider.ShowImmediate();
-                }
-                else
-                {
-                    root.SetActive(true);
-                }
-            }
-            else
-            {
-                UIPanelSlider.OpenRoot(root);
-            }
-
-            ApplyBattleInventoryPosition();
+            UIPanelSlider.OpenRoot(root);
+            ApplyUpperBandInventoryPosition();
             Refresh();
         }
 
         /// <summary>
-        /// In BattleDemo, keep the same inventory panel — only move it into the upper free area
-        /// above the 320px battle band (960×960 canvas).
+        /// Battle/Village band layout: move the inventory card into the upper free area.
         /// </summary>
-        private void ApplyBattleInventoryPosition()
+        private void ApplyUpperBandInventoryPosition()
         {
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != Game.Core.GameScenes.Battle)
-            {
-                return;
-            }
-
-            Transform card = transform.Find("Card");
-            RectTransform cardRt = card != null ? card as RectTransform : null;
-            if (cardRt == null)
-            {
-                return;
-            }
-
-            // Full-screen parent, center pivot: screen Y ∈ [-480, 480].
-            // Battle band = bottom 320px → [-480, -160]. Upper band midpoint = 160.
-            cardRt.anchorMin = new Vector2(0.5f, 0.5f);
-            cardRt.anchorMax = new Vector2(0.5f, 0.5f);
-            cardRt.pivot = new Vector2(0.5f, 0.5f);
-            cardRt.anchoredPosition = new Vector2(0f, 160f);
-            cardRt.localScale = Vector3.one;
+            BattleViewportLayout.ApplyUpperBandCard(transform);
         }
+
 
         public void Close()
         {
@@ -454,24 +419,9 @@ namespace Game.UI
                 itemTooltip.Hide();
             }
 
-            GameObject root = panelRoot != null ? panelRoot : gameObject;
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Game.Core.GameScenes.Battle)
-            {
-                UIPanelSlider slider = root != null ? root.GetComponent<UIPanelSlider>() : null;
-                if (slider != null)
-                {
-                    slider.HideImmediate();
-                }
-                else if (root != null)
-                {
-                    root.SetActive(false);
-                }
-            }
-            else
-            {
-                UIPanelSlider.CloseRoot(panelRoot, gameObject);
-            }
+            UIPanelSlider.CloseRoot(panelRoot, gameObject);
         }
+
 
         public void CloseFromUser()
         {
@@ -721,7 +671,7 @@ namespace Game.UI
                 dim.raycastTarget = true;
                 // Battle uses magenta color-key for desktop see-through. A semi-transparent
                 // black dim over that key color becomes pink and no longer keys out.
-                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Game.Core.GameScenes.Battle)
+                if (BattleViewportLayout.IsBandLayoutScene())
                 {
                     dim.color = new Color(0f, 0f, 0f, 0f);
                 }
@@ -1196,8 +1146,7 @@ namespace Game.UI
                 return;
             }
 
-            bool battle = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Game.Core.GameScenes.Battle;
-            if (!battle)
+            if (!BattleViewportLayout.IsBandLayoutScene())
             {
                 image.material = null;
                 return;
@@ -1221,7 +1170,7 @@ namespace Game.UI
             Shader shader = Shader.Find("UI/ChromaKeySafe");
             if (shader == null)
             {
-                Debug.LogWarning("[InventoryPanelUI] UI/ChromaKeySafe shader missing — pink frame edges may show in battle.");
+                Debug.LogWarning("[InventoryPanelUI] UI/ChromaKeySafe shader missing — pink frame edges may show over desktop transparency.");
                 return null;
             }
 

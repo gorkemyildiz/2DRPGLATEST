@@ -57,6 +57,7 @@ namespace Game.UI
 
         private void Awake()
         {
+            BattleViewportLayout.FindOrCreate();
             WireButtons();
         }
 

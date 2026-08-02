@@ -43,6 +43,7 @@ namespace Game.UI
             }
 
             gameObject.SetActive(true);
+            BattleViewportLayout.ApplyUpperBandCard(panelRoot != null ? panelRoot.transform : transform);
 
             if (titleText != null)
             {
