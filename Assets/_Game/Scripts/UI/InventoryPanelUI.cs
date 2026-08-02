@@ -393,7 +393,25 @@ namespace Game.UI
             Subscribe();
             TrySeedDemoItems();
             isOpen = true;
-            UIPanelSlider.OpenRoot(panelRoot != null ? panelRoot : gameObject);
+            GameObject root = panelRoot != null ? panelRoot : gameObject;
+            // Skip fade in battle: CanvasGroup alpha over magenta key flashes pink.
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Game.Core.GameScenes.Battle)
+            {
+                UIPanelSlider slider = UIPanelSlider.EnsureOn(root);
+                if (slider != null)
+                {
+                    slider.ShowImmediate();
+                }
+                else
+                {
+                    root.SetActive(true);
+                }
+            }
+            else
+            {
+                UIPanelSlider.OpenRoot(root);
+            }
+
             ApplyBattleInventoryPosition();
             Refresh();
         }
@@ -433,7 +451,23 @@ namespace Game.UI
                 itemTooltip.Hide();
             }
 
-            UIPanelSlider.CloseRoot(panelRoot, gameObject);
+            GameObject root = panelRoot != null ? panelRoot : gameObject;
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Game.Core.GameScenes.Battle)
+            {
+                UIPanelSlider slider = root != null ? root.GetComponent<UIPanelSlider>() : null;
+                if (slider != null)
+                {
+                    slider.HideImmediate();
+                }
+                else if (root != null)
+                {
+                    root.SetActive(false);
+                }
+            }
+            else
+            {
+                UIPanelSlider.CloseRoot(panelRoot, gameObject);
+            }
         }
 
         public void CloseFromUser()
@@ -666,8 +700,17 @@ namespace Game.UI
             {
                 dim.enabled = true;
                 dim.sprite = null;
-                dim.color = new Color(0f, 0f, 0f, 0.62f);
                 dim.raycastTarget = true;
+                // Battle uses magenta color-key for desktop see-through. A semi-transparent
+                // black dim over that key color becomes pink and no longer keys out.
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Game.Core.GameScenes.Battle)
+                {
+                    dim.color = new Color(0f, 0f, 0f, 0f);
+                }
+                else
+                {
+                    dim.color = new Color(0f, 0f, 0f, 0.62f);
+                }
             }
 
             transform.localScale = Vector3.one;
