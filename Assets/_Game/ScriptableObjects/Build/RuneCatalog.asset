@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87051cc6f934edb8ccb907c00b83f25, type: 3}
+  m_Name: RuneCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.RuneCatalog
+  nodes:
+  - {fileID: 11400000, guid: 1a5f1c7f7abb41b7970502e415e98c77, type: 2}
+  - {fileID: 11400000, guid: a641f723ceae48e38dcde819d89312bf, type: 2}
+  - {fileID: 11400000, guid: ed9a737302e4413d8815935e3b6eaef4, type: 2}
+  - {fileID: 11400000, guid: 4b99cb7deefe4b179deea1b7fbf41710, type: 2}
+  - {fileID: 11400000, guid: 05d14927b3234c8a86911822ea2d10b6, type: 2}
+  - {fileID: 11400000, guid: 6a0f676b01ab469fb6e587bcfa9face4, type: 2}
+  - {fileID: 11400000, guid: 7840bbada12344d0bb15e46061b90e7b, type: 2}
+  - {fileID: 11400000, guid: a674bbd6969f40ee9992f2d9c609b762, type: 2}
+  - {fileID: 11400000, guid: 3f6bbbb5f3514c268b5e7864296fd7d3, type: 2}

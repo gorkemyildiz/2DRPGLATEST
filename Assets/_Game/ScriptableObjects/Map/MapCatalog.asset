@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b28c4a81c8454c4986a0250462bbb2d, type: 3}
+  m_Name: MapCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.MapCatalog
+  layers:
+  - {fileID: 11400000, guid: 13c8ff469a5a6439c83a07857d65e243, type: 2}
+  normalChest: {fileID: 11400000, guid: 301506628285e48aab0c0e544c49ec52, type: 2}
+  levelBossChest: {fileID: 11400000, guid: 66bf5f614d0c14913a49a70cdde425b5, type: 2}
+  chapterBossChest: {fileID: 11400000, guid: 4f73c9dd106f34f15af9d57038b3af1a, type: 2}
+  layerBossChest: {fileID: 11400000, guid: ec9b26dc85b954f058dc2e0ed7b890d6, type: 2}
+  dungeonBossChest: {fileID: 11400000, guid: fef0f69a44e6640b897337abba24984a, type: 2}

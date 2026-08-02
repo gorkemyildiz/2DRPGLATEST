@@ -1,0 +1,1391 @@
+fileFormatVersion: 2
+guid: 63ce25a126c0e419e9a259c70353ec7f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7396226443870958609
+    second: Icon_Crystal_Source_0
+  - first:
+      213: 9145954235439617954
+    second: Icon_Crystal_Source_1
+  - first:
+      213: -8337395820238579315
+    second: Icon_Crystal_Source_2
+  - first:
+      213: -7901341808299502341
+    second: Icon_Crystal_Source_3
+  - first:
+      213: 1817876020040704229
+    second: Icon_Crystal_Source_4
+  - first:
+      213: -6250578752898623062
+    second: Icon_Crystal_Source_5
+  - first:
+      213: -3057998863274844684
+    second: Icon_Crystal_Source_6
+  - first:
+      213: -8774239209235871202
+    second: Icon_Crystal_Source_7
+  - first:
+      213: 4049439675170715204
+    second: Icon_Crystal_Source_8
+  - first:
+      213: 5239635911506939636
+    second: Icon_Crystal_Source_9
+  - first:
+      213: 1065476793770744736
+    second: Icon_Crystal_Source_10
+  - first:
+      213: -183210895671016852
+    second: Icon_Crystal_Source_11
+  - first:
+      213: -5939690116619697880
+    second: Icon_Crystal_Source_12
+  - first:
+      213: 333764800643891156
+    second: Icon_Crystal_Source_13
+  - first:
+      213: 7976113961900322065
+    second: Icon_Crystal_Source_14
+  - first:
+      213: -6455784219872985735
+    second: Icon_Crystal_Source_15
+  - first:
+      213: 3481971103487425558
+    second: Icon_Crystal_Source_16
+  - first:
+      213: 5202351118301873736
+    second: Icon_Crystal_Source_17
+  - first:
+      213: -2563190910143607110
+    second: Icon_Crystal_Source_18
+  - first:
+      213: -315759006967803485
+    second: Icon_Crystal_Source_19
+  - first:
+      213: -5111586935359602914
+    second: Icon_Crystal_Source_20
+  - first:
+      213: -4231562173343109228
+    second: Icon_Crystal_Source_21
+  - first:
+      213: -2952045306872700116
+    second: Icon_Crystal_Source_22
+  - first:
+      213: -4236039267024087231
+    second: Icon_Crystal_Source_23
+  - first:
+      213: 8374359127817764576
+    second: Icon_Crystal_Source_24
+  - first:
+      213: 165252821246302232
+    second: Icon_Crystal_Source_25
+  - first:
+      213: -7087790610163433609
+    second: Icon_Crystal_Source_26
+  - first:
+      213: -42362148478501087
+    second: Icon_Crystal_Source_27
+  - first:
+      213: -9166702914505990252
+    second: Icon_Crystal_Source_28
+  - first:
+      213: 7104467345291526993
+    second: Icon_Crystal_Source_29
+  - first:
+      213: -5807922199232131945
+    second: Icon_Crystal_Source_30
+  - first:
+      213: -8994301588912000387
+    second: Icon_Crystal_Source_31
+  - first:
+      213: 2821437195634014997
+    second: Icon_Crystal_Source_32
+  - first:
+      213: 2587976681033189578
+    second: Icon_Crystal_Source_33
+  - first:
+      213: 8157050089508200739
+    second: Icon_Crystal_Source_34
+  - first:
+      213: -7925050394077422326
+    second: Icon_Crystal_Source_35
+  - first:
+      213: 6521079140459126638
+    second: Icon_Crystal_Source_36
+  - first:
+      213: -9223314401703517649
+    second: Icon_Crystal_Source_37
+  - first:
+      213: 5571047240496009903
+    second: Icon_Crystal_Source_38
+  - first:
+      213: -7005330978443924735
+    second: Icon_Crystal_Source_39
+  - first:
+      213: -4942436805240746054
+    second: Icon_Crystal_Source_40
+  - first:
+      213: -4251587534340851501
+    second: Icon_Crystal_Source_41
+  - first:
+      213: 7136332433179161418
+    second: Icon_Crystal_Source_42
+  - first:
+      213: -1659711288443368697
+    second: Icon_Crystal_Source_43
+  - first:
+      213: -2675821404493297131
+    second: Icon_Crystal_Source_44
+  - first:
+      213: 3608828302429727614
+    second: Icon_Crystal_Source_45
+  - first:
+      213: -4197696728914785516
+    second: Icon_Crystal_Source_46
+  - first:
+      213: -2090144770129413678
+    second: Icon_Crystal_Source_47
+  - first:
+      213: -7519105091012396996
+    second: Icon_Crystal_Source_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 227
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114774983cca4a660800000000000000
+      internalID: 7396226443870958609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 707
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a79b577be4fcee70800000000000000
+      internalID: 9145954235439617954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 336
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d895ad6ccae9b4c80800000000000000
+      internalID: -8337395820238579315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 323
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf49d5b0d7bc85290800000000000000
+      internalID: -7901341808299502341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 838
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e02a34db946a3910800000000000000
+      internalID: 1817876020040704229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 812
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa99fd0cdbb7149a0800000000000000
+      internalID: -6250578752898623062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 734
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd54fe5c3ecf85d0800000000000000
+      internalID: -3057998863274844684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 620
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a01375de3ab3680800000000000000
+      internalID: -8774239209235871202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 388
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4467ce10eef723830800000000000000
+      internalID: 4049439675170715204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 94
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe40c9c91de6b840800000000000000
+      internalID: 5239635911506939636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab9021bf7559ce00800000000000000
+      internalID: 1065476793770744736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_11
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 406
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c624c8c39aa157df0800000000000000
+      internalID: -183210895671016852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_12
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 728
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8210cfa0f4bf19da0800000000000000
+      internalID: -5939690116619697880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_13
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 410
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df78ec5155c1a400800000000000000
+      internalID: 333764800643891156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_14
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 448
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d2a1b9369d0be60800000000000000
+      internalID: 7976113961900322065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_15
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 439
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97df5ebc4727866a0800000000000000
+      internalID: -6455784219872985735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_16
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 426
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61cfa853542725030800000000000000
+      internalID: 3481971103487425558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_17
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 399
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8464d3367c6723840800000000000000
+      internalID: 5202351118301873736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_18
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 392
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe41659277bd6cd0800000000000000
+      internalID: -2563190910143607110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_19
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 376
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1dd0b2bd23e9bf0800000000000000
+      internalID: -315759006967803485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_20
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 351
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ffc5fb3ceff09b0800000000000000
+      internalID: -5111586935359602914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_21
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 600
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f67e48f987645c0800000000000000
+      internalID: -4231562173343109228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_22
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 562
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c236efa1f6a3807d0800000000000000
+      internalID: -2952045306872700116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_23
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 0
+        width: 550
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1475c6aeab09635c0800000000000000
+      internalID: -4236039267024087231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_24
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 456
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eeb02be143b73470800000000000000
+      internalID: 8374359127817764576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_25
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 736
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818548cb0981b4200800000000000000
+      internalID: 165252821246302232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_26
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 616
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ffbd62efb13ad90800000000000000
+      internalID: -7087790610163433609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_27
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 576
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f3404b9df796ff0800000000000000
+      internalID: -42362148478501087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_28
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 544
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f155b344459c080800000000000000
+      internalID: -9166702914505990252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_29
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 536
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153c672d863289260800000000000000
+      internalID: 7104467345291526993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_30
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 490
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79cc9af088d166fa0800000000000000
+      internalID: -5807922199232131945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_31
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 448
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d723b26db52dd2380800000000000000
+      internalID: -8994301588912000387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_32
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 440
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51bf6d94e22c72720800000000000000
+      internalID: 2821437195634014997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_33
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 418
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac84af764175ae320800000000000000
+      internalID: 2587976681033189578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_34
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 400
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3216438a6d9a33170800000000000000
+      internalID: 8157050089508200739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_35
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 392
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d12f1c7a0940290800000000000000
+      internalID: -7925050394077422326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_36
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 384
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f96479de68f7a50800000000000000
+      internalID: 6521079140459126638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_37
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 322
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22a7ba3b64300080800000000000000
+      internalID: -9223314401703517649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_38
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 272
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa25fa4d2f5505d40800000000000000
+      internalID: 5571047240496009903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_39
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 200
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b6fc7479018ce90800000000000000
+      internalID: -7005330978443924735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_40
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 518
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf0fca69efe86bb0800000000000000
+      internalID: -4942436805240746054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_41
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 410
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d87224d9a35ff4c0800000000000000
+      internalID: -4251587534340851501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_42
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 370
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a433ebeb988590360800000000000000
+      internalID: 7136332433179161418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_43
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 354
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b80ae606587f8e0800000000000000
+      internalID: -1659711288443368697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_44
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 282
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a4ac61c929ddad0800000000000000
+      internalID: -2675821404493297131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_45
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 186
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b23bd7832251230800000000000000
+      internalID: 3608828302429727614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_46
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 735
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b073eb019ceb5c0800000000000000
+      internalID: -4197696728914785516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_47
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 40
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9bb47d7605ef2e0800000000000000
+      internalID: -2090144770129413678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crystal_Source_48
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 555
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38ff55f1c5c6a790800000000000000
+      internalID: -7519105091012396996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Icon_Crystal_Source_0: 7396226443870958609
+      Icon_Crystal_Source_1: 9145954235439617954
+      Icon_Crystal_Source_10: 1065476793770744736
+      Icon_Crystal_Source_11: -183210895671016852
+      Icon_Crystal_Source_12: -5939690116619697880
+      Icon_Crystal_Source_13: 333764800643891156
+      Icon_Crystal_Source_14: 7976113961900322065
+      Icon_Crystal_Source_15: -6455784219872985735
+      Icon_Crystal_Source_16: 3481971103487425558
+      Icon_Crystal_Source_17: 5202351118301873736
+      Icon_Crystal_Source_18: -2563190910143607110
+      Icon_Crystal_Source_19: -315759006967803485
+      Icon_Crystal_Source_2: -8337395820238579315
+      Icon_Crystal_Source_20: -5111586935359602914
+      Icon_Crystal_Source_21: -4231562173343109228
+      Icon_Crystal_Source_22: -2952045306872700116
+      Icon_Crystal_Source_23: -4236039267024087231
+      Icon_Crystal_Source_24: 8374359127817764576
+      Icon_Crystal_Source_25: 165252821246302232
+      Icon_Crystal_Source_26: -7087790610163433609
+      Icon_Crystal_Source_27: -42362148478501087
+      Icon_Crystal_Source_28: -9166702914505990252
+      Icon_Crystal_Source_29: 7104467345291526993
+      Icon_Crystal_Source_3: -7901341808299502341
+      Icon_Crystal_Source_30: -5807922199232131945
+      Icon_Crystal_Source_31: -8994301588912000387
+      Icon_Crystal_Source_32: 2821437195634014997
+      Icon_Crystal_Source_33: 2587976681033189578
+      Icon_Crystal_Source_34: 8157050089508200739
+      Icon_Crystal_Source_35: -7925050394077422326
+      Icon_Crystal_Source_36: 6521079140459126638
+      Icon_Crystal_Source_37: -9223314401703517649
+      Icon_Crystal_Source_38: 5571047240496009903
+      Icon_Crystal_Source_39: -7005330978443924735
+      Icon_Crystal_Source_4: 1817876020040704229
+      Icon_Crystal_Source_40: -4942436805240746054
+      Icon_Crystal_Source_41: -4251587534340851501
+      Icon_Crystal_Source_42: 7136332433179161418
+      Icon_Crystal_Source_43: -1659711288443368697
+      Icon_Crystal_Source_44: -2675821404493297131
+      Icon_Crystal_Source_45: 3608828302429727614
+      Icon_Crystal_Source_46: -4197696728914785516
+      Icon_Crystal_Source_47: -2090144770129413678
+      Icon_Crystal_Source_48: -7519105091012396996
+      Icon_Crystal_Source_5: -6250578752898623062
+      Icon_Crystal_Source_6: -3057998863274844684
+      Icon_Crystal_Source_7: -8774239209235871202
+      Icon_Crystal_Source_8: 4049439675170715204
+      Icon_Crystal_Source_9: 5239635911506939636
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

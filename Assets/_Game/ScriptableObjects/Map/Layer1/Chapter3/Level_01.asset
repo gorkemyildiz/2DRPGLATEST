@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70fd80fc213914f718ad7c1e1d1733f2, type: 3}
+  m_Name: Level_01
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.LevelData
+  levelId: L1_C3_01
+  displayName: L1-C3 Level 1
+  layerIndex: 1
+  chapterIndex: 3
+  levelIndex: 1
+  battleContent: {fileID: 11400000, guid: b0b2905b3c274406486554b85aff6b57, type: 2}
+  isChapterBoss: 0
+  completionChestTier: 1
+  completionChest: {fileID: 11400000, guid: 66bf5f614d0c14913a49a70cdde425b5, type: 2}

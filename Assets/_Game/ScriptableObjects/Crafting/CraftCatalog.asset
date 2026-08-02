@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700ac9af0b558455586ab2b602b6de2f, type: 3}
+  m_Name: CraftCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CraftCatalog
+  materials:
+  - {fileID: 11400000, guid: 9b4c1a7edc7e24adfa21b1af80ff1397, type: 2}
+  - {fileID: 11400000, guid: 8400fe7d1e9fc4a57b346bc37e2d01d3, type: 2}
+  - {fileID: 11400000, guid: c5c774e67a98147aea100e5957e80405, type: 2}
+  - {fileID: 11400000, guid: a62f37465639641d3a1035b6f49cfba2, type: 2}
+  - {fileID: 11400000, guid: 13fbd02494d454a40a310066d76b2cd7, type: 2}
+  - {fileID: 11400000, guid: 7c68de771e7cf4d179ee3472c3e86f1a, type: 2}
+  - {fileID: 11400000, guid: 8ce7d38e7a61b414885a6ffc5d3ff168, type: 2}
+  - {fileID: 11400000, guid: 66e0244e6b8b844029c3bd9fbfe5cd5b, type: 2}
+  recipes:
+  - {fileID: 11400000, guid: 3e6c73b26272c4538b03f02d637085bb, type: 2}
+  - {fileID: 11400000, guid: 85702273e00e944c285130507a743916, type: 2}
+  - {fileID: 11400000, guid: b2c61a411f2d74774b9d55c01827e4ea, type: 2}
+  scrapMaterial: {fileID: 11400000, guid: 9b4c1a7edc7e24adfa21b1af80ff1397, type: 2}
+  scrapByRarity: 0100000002000000030000000500000008000000
+  mergeInputCount: 9
+  chancePlusOneRarity: 0.25
+  chancePlusTwoRarity: 0.05
+  mergeResultPool:
+  - {fileID: 11400000, guid: 65919fe0767274f87ae1b83e5132c0a9, type: 2}
+  - {fileID: 11400000, guid: 312609e464d824698ac4633b9fb17cd9, type: 2}
+  - {fileID: 11400000, guid: 07bda9b0b0bd847cd99b1efab838aa81, type: 2}
+  - {fileID: 11400000, guid: e0e5b452354344d6899e25baa80a75e6, type: 2}
+  - {fileID: 11400000, guid: 7b869ed4ac329481a8794d67b518fa0e, type: 2}
+  - {fileID: 11400000, guid: b3bdfcdbc48ff4cd8aa08b5dcd9956e4, type: 2}
+  - {fileID: 11400000, guid: 82b1b981ac23d417bad20a72c630582d, type: 2}
+  - {fileID: 11400000, guid: e54e81e50a5dc403a91789c6728b058c, type: 2}
+  summonStone: {fileID: 11400000, guid: 13fbd02494d454a40a310066d76b2cd7, type: 2}
+  courageStone: {fileID: 11400000, guid: 7c68de771e7cf4d179ee3472c3e86f1a, type: 2}
+  summonStoneRecipe: {fileID: 11400000, guid: b2c61a411f2d74774b9d55c01827e4ea, type: 2}

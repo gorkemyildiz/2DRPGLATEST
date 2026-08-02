@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edff8b46e29148628467aa1d8ca1f80, type: 3}
+  m_Name: Chapter_2
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.ChapterData
+  chapterId: L1_C2
+  displayName: 'Chapter 2: Bog Crossing'
+  layerIndex: 1
+  chapterIndex: 2
+  levels:
+  - {fileID: 11400000, guid: 7624473bdc2324d0aa830a93b1ad12f4, type: 2}
+  - {fileID: 11400000, guid: aab6a7ab871e04b22ad1f7a03f2f456c, type: 2}
+  - {fileID: 11400000, guid: 9f9acfc84369e4a17b920cbba077d233, type: 2}
+  - {fileID: 11400000, guid: a30bd8090323c4fc38935297a41cad68, type: 2}
+  - {fileID: 11400000, guid: 027fa627d9a714c12b4d34cdf5cf3976, type: 2}
+  - {fileID: 11400000, guid: 1f7b3761b18aa4cecb74b021e58cee14, type: 2}
+  - {fileID: 11400000, guid: c67828cc7e7874ea484318a101101202, type: 2}
+  - {fileID: 11400000, guid: b29d3fcb66d6349d29fa8227c23691cc, type: 2}
+  - {fileID: 11400000, guid: eebd0582e14f6485da9a5571b521ab1d, type: 2}
+  - {fileID: 11400000, guid: 1bfbbe443cdb3484abbfbdc06237b9a9, type: 2}

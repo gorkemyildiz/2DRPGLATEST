@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75088defc54dc4a3cb21e9bab5a1ecaa, type: 3}
+  m_Name: Stage_WeeklyDungeon
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.StageData
+  stageId: stage_weekly_dungeon
+  displayName: Weekly Dungeon
+  stageIndex: 900
+  waves:
+  - waveName: Weekly Boss
+    enemies:
+    - {fileID: 11400000, guid: d4c065795a11548d786050b3b08a4b6b, type: 2}
+    delayBeforeWave: 0.5
+    delayBetweenEnemies: 0.5
+    simultaneousSpawnCount: 1
+  travelDuration: 2
+  delayAfterTravel: 0.5
+  completionGoldBonus: 120
+  completionExperienceBonus: 180

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7586d23e07e42ecab74e706c414eb6, type: 3}
+  m_Name: Building_Blacksmith
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.VillageBuildingData
+  buildingId: building_blacksmith
+  displayName: Blacksmith
+  buildingType: 2
+  icon: {fileID: 1944592574858670343, guid: dca68d5ef8dc3414b8772ab50300cdcd, type: 3}
+  plazaSprite: {fileID: 1944592574858670343, guid: dca68d5ef8dc3414b8772ab50300cdcd, type: 3}
+  maxLevel: 10
+  baseGoldPerHour: 0
+  baseExperiencePerHour: 0
+  goldPerHourPerLevel: 0
+  experiencePerHourPerLevel: 0
+  craftSpeedBonusPerLevel: 0.05
+  baseUpgradeGoldCost: 50
+  upgradeGoldCostPerLevel: 40
+  requiredPlayerLevelPerBuildingLevel: 1

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bc7f898ada40d7bfb52bb0b6d1b248, type: 3}
+  m_Name: HeroClassCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.HeroClassCatalog
+  defaultClassId: fighter
+  classes:
+  - {fileID: 11400000, guid: 4b41e7c2430c42f4ba9a39507423beb0, type: 2}
+  - {fileID: 11400000, guid: 6b634397c3d64021beac040358727efa, type: 2}
+  - {fileID: 11400000, guid: 54f096411dec49f18d9b610831914f46, type: 2}
+  - {fileID: 11400000, guid: f2c4b1d485b1405c92b6f845f7f264ed, type: 2}
+  - {fileID: 11400000, guid: c7486615972e4e8faccf5720e7626722, type: 2}
+  - {fileID: 11400000, guid: 2efb569bc3ae425396171bce36065b3b, type: 2}
+  unlockAllForDemo: 1
+  maxPartySlots: 3
+  partySlotGoldCosts:
+  - 0
+  - 1000
+  - 5000

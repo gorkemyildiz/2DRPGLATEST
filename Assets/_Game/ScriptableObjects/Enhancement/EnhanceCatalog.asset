@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf9519c0ddc549e69d6afb19b2c52a8, type: 3}
+  m_Name: EnhanceCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.EnhanceCatalog
+  enchants:
+  - {fileID: 11400000, guid: 5acae5111f61348278f998ada55f50dd, type: 2}
+  - {fileID: 11400000, guid: dcd8e69914bbb4f8287b0c7a4dc1fd38, type: 2}
+  - {fileID: 11400000, guid: ad8c39e0579484dadb36b4145943314c, type: 2}
+  - {fileID: 11400000, guid: a08157b65bfcd41a4b67f375584a1333, type: 2}
+  - {fileID: 11400000, guid: c3df30227de844cbcbe6b141a3784d5f, type: 2}
+  starGoldCosts: 1e0000003c00000078000000fa000000f4010000
+  starScrapCosts: 0200000004000000060000000a00000010000000
+  scrapMaterialId: mat_scrap
+  duplicateRequiredFromStar: 3

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7586d23e07e42ecab74e706c414eb6, type: 3}
+  m_Name: Building_Mine
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.VillageBuildingData
+  buildingId: building_mine
+  displayName: Mine
+  buildingType: 1
+  icon: {fileID: 8135663367076951168, guid: 1960b52229b794e0ab7a090e4345e54d, type: 3}
+  plazaSprite: {fileID: 8135663367076951168, guid: 1960b52229b794e0ab7a090e4345e54d, type: 3}
+  maxLevel: 10
+  baseGoldPerHour: 80
+  baseExperiencePerHour: 0
+  goldPerHourPerLevel: 25
+  experiencePerHourPerLevel: 0
+  craftSpeedBonusPerLevel: 0
+  baseUpgradeGoldCost: 50
+  upgradeGoldCostPerLevel: 40
+  requiredPlayerLevelPerBuildingLevel: 1

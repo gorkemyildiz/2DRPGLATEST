@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d10a255b5b4926a5c74b258bacfa2b, type: 3}
+  m_Name: SkillCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.SkillCatalog
+  skills:
+  - {fileID: 11400000, guid: afa3869f9c6042779162be35997538c7, type: 2}
+  - {fileID: 11400000, guid: 354b5779d66e4c6e9717b75b9cd6387a, type: 2}
+  - {fileID: 11400000, guid: f9c009c947bf484bb3a09cd1ed63fabc, type: 2}
+  - {fileID: 11400000, guid: 0c5b878b731e40949b0d861b74022f39, type: 2}
+  - {fileID: 11400000, guid: bfcf209687104b27be04a5a6194d9d89, type: 2}
+  activeSlot1UnlockLevel: 1
+  activeSlot2UnlockLevel: 5
+  passiveSlotUnlockLevel: 10

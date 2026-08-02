@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60ebad9c439944a8af64a7b15cc7683, type: 3}
+  m_Name: Recipe_SwampArmor
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CraftRecipeData
+  recipeId: recipe_swamp_armor
+  displayName: Swamp Armor
+  outputItem: {fileID: 11400000, guid: 07bda9b0b0bd847cd99b1efab838aa81, type: 2}
+  outputCount: 1
+  ingredients:
+  - material: {fileID: 11400000, guid: 9b4c1a7edc7e24adfa21b1af80ff1397, type: 2}
+    amount: 4
+  - material: {fileID: 11400000, guid: c5c774e67a98147aea100e5957e80405, type: 2}
+    amount: 3
+  goldCost: 40
+  requiredBlacksmithLevel: 1

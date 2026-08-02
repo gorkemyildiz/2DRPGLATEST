@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3dfe4de6e164bbd8c89b0d3730e04a, type: 3}
+  m_Name: Layer_01
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.LayerData
+  layerId: layer_01
+  displayName: 'Layer 1: Swamp Frontier'
+  layerIndex: 1
+  chapters:
+  - {fileID: 11400000, guid: 5e5876e7e879f4484842be6c761dfccf, type: 2}
+  - {fileID: 11400000, guid: 5c7dff9a63efc441aaa22c158783589e, type: 2}
+  - {fileID: 11400000, guid: 8de1e373fd4a24e7c8a87094ebf56a33, type: 2}
+  layerBossBattle: {fileID: 11400000, guid: 96c5cef24be54456a3846edfa5995c08, type: 2}
+  layerBossDisplayName: Swamp Layer Boss
+  layerBossChest: {fileID: 11400000, guid: ec9b26dc85b954f058dc2e0ed7b890d6, type: 2}
+  requireSummonStone: 0

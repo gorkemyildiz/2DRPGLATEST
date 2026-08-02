@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edff8b46e29148628467aa1d8ca1f80, type: 3}
+  m_Name: Chapter_3
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.ChapterData
+  chapterId: L1_C3
+  displayName: 'Chapter 3: Ruined Gate'
+  layerIndex: 1
+  chapterIndex: 3
+  levels:
+  - {fileID: 11400000, guid: 2203e97661d1940b8b8a6a53e5d4ecb2, type: 2}
+  - {fileID: 11400000, guid: 82d6fd046e4aa400398f2ff5e5f7362b, type: 2}
+  - {fileID: 11400000, guid: ecfe670740c4c456ba7d34ae65e1197d, type: 2}
+  - {fileID: 11400000, guid: f34a829910cd04093a968eacbca82885, type: 2}
+  - {fileID: 11400000, guid: 97ca1597edabf4bb7b1a6d38af047b5c, type: 2}
+  - {fileID: 11400000, guid: 897ecca9970b24550b2ff79f367915b1, type: 2}
+  - {fileID: 11400000, guid: 8412541ee74dc425aa9f5b93524213e0, type: 2}
+  - {fileID: 11400000, guid: 6c224bdedbf7c4227a98297e136e6e12, type: 2}
+  - {fileID: 11400000, guid: f175be05f25ea44c08d678d5fac45c8a, type: 2}
+  - {fileID: 11400000, guid: e0f132ef59c3942c9b0907c91df681b0, type: 2}

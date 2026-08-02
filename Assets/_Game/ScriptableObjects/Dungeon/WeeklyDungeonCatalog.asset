@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad63943e53d46ff9ed6ab719023174c, type: 3}
+  m_Name: WeeklyDungeonCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Data.WeeklyDungeonCatalog
+  maxEntriesPerWeek: 10
+  courageStoneCost: 1
+  courageStoneMaterialId: mat_courage_stone
+  dungeonStage: {fileID: 11400000, guid: 0f62f5dc94d148d39dd4490cd77d7916, type: 2}
+  displayName: Weekly Dungeon
+  bossRotation:
+  - {fileID: 11400000, guid: d4c065795a11548d786050b3b08a4b6b, type: 2}
+  - {fileID: 11400000, guid: 472fd4c8668044a65b62ec814620bc56, type: 2}
+  - {fileID: 11400000, guid: d5afc516016f74a2c8452867fb4418c2, type: 2}
+  dungeonChest: {fileID: 11400000, guid: fef0f69a44e6640b897337abba24984a, type: 2}
+  layerBossCourageDropChance: 0.25
+  weeklyClaimStoneAmount: 1
