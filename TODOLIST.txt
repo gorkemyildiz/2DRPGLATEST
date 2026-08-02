@@ -1,0 +1,15 @@
+960x960 oyunumuz genel görüntüsü.
+
+TODOLIST
+
+
+
+Uygulama olarak değil aslında taskbar gibi arka planda oynanacak bir oyun gibi olmalı .
+Oyun farklı ekrana tıklanınca oynatmıyor. 
+Classlar arası geçiş assing edildiğinde yansımıyor . (Herolar)
+!Herolar ile alakalı genel bir inceleme gerekecek.
+XP/GOLD kontrolleri .
+Savaş içerisinde çarpı butonları çalışmamakta .
+UI tasarımları zaten eksik .
+Başlangıç ekran ya da mapin uzunluğunu biraz daha büyütmek gerekir .
+
