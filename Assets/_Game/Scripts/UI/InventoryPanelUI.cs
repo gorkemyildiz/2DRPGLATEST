@@ -14,6 +14,9 @@ namespace Game.UI
         [Header("Root")]
         [SerializeField] private GameObject panelRoot;
         [SerializeField] private Image cardBackground;
+        [SerializeField] private Material chromaKeySafeMaterial;
+
+        private static Material runtimeChromaKeySafeMaterial;
 
         [Header("Paper Doll (8 fixed boxes)")]
         [SerializeField] private List<EquipmentSlotUI> equipmentSlots = new List<EquipmentSlotUI>();
@@ -693,6 +696,21 @@ namespace Game.UI
                 bg.type = Image.Type.Simple;
                 bg.preserveAspect = true;
                 bg.raycastTarget = true;
+                ApplyChromaKeySafeMaterial(bg);
+            }
+
+            if (itemTooltip != null)
+            {
+                Image tipImg = itemTooltip.GetComponent<Image>();
+                if (tipImg == null)
+                {
+                    tipImg = itemTooltip.GetComponentInChildren<Image>(true);
+                }
+
+                if (tipImg != null)
+                {
+                    ApplyChromaKeySafeMaterial(tipImg);
+                }
             }
 
             Image dim = GetComponent<Image>();
@@ -1169,6 +1187,51 @@ namespace Game.UI
             }
 
             spawnedSlots.Clear();
+        }
+
+        private void ApplyChromaKeySafeMaterial(Image image)
+        {
+            if (image == null)
+            {
+                return;
+            }
+
+            bool battle = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Game.Core.GameScenes.Battle;
+            if (!battle)
+            {
+                image.material = null;
+                return;
+            }
+
+            image.material = GetChromaKeySafeMaterial();
+        }
+
+        private Material GetChromaKeySafeMaterial()
+        {
+            if (chromaKeySafeMaterial != null)
+            {
+                return chromaKeySafeMaterial;
+            }
+
+            if (runtimeChromaKeySafeMaterial != null)
+            {
+                return runtimeChromaKeySafeMaterial;
+            }
+
+            Shader shader = Shader.Find("UI/ChromaKeySafe");
+            if (shader == null)
+            {
+                Debug.LogWarning("[InventoryPanelUI] UI/ChromaKeySafe shader missing — pink frame edges may show in battle.");
+                return null;
+            }
+
+            runtimeChromaKeySafeMaterial = new Material(shader)
+            {
+                name = "UI-ChromaKeySafe (Runtime)"
+            };
+            runtimeChromaKeySafeMaterial.SetFloat("_Cutoff", 0.4f);
+            runtimeChromaKeySafeMaterial.SetColor("_KeyColor", Game.Core.DesktopTransparency.KeyColorUnity);
+            return runtimeChromaKeySafeMaterial;
         }
     }
 }
