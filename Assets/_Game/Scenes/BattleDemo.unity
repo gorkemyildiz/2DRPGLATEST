@@ -296,7 +296,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleCamera: {fileID: 0}
-  upperBandTint: {r: 0, g: 0, b: 0, a: 1}
   upperBandImage: {fileID: 0}
   battleMenu: {fileID: 0}
   topPanel: {fileID: 0}
