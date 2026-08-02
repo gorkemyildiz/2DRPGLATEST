@@ -6,6 +6,7 @@ namespace Game.UI
 {
     /// <summary>
     /// BattleDemo layout: 960×960 canvas, live battle locked to the bottom 320px band.
+    /// Upper band is cleared each frame (clear camera + opaque UI fill) so closed panels leave no ghosts.
     /// </summary>
     [DisallowMultipleComponent]
     public class BattleViewportLayout : MonoBehaviour
@@ -13,7 +14,17 @@ namespace Game.UI
         public const float CanvasSize = 960f;
         public const float BattleHeight = 320f;
 
+        [Header("Battle camera")]
         [SerializeField] private Camera battleCamera;
+
+        [Header("Upper band background")]
+        [SerializeField] private Color upperBandTint = Color.black;
+        [SerializeField] private Image upperBandImage;
+
+        private const string UpperClearCameraName = "BattleUpperClearCamera";
+        private Camera upperClearCamera;
+
+        [Header("Battle HUD")]
         [SerializeField] private RectTransform battleMenu;
         [SerializeField] private RectTransform topPanel;
         [SerializeField] private RectTransform levelUpPanel;
@@ -21,6 +32,7 @@ namespace Game.UI
         [SerializeField] private RectTransform battleResultPanel;
 
         public static float BattleHeightNormalized => BattleHeight / CanvasSize;
+        public static float UpperBandHeightNormalized => 1f - BattleHeightNormalized;
 
         public static BattleViewportLayout FindOrCreate()
         {
@@ -60,8 +72,20 @@ namespace Game.UI
 
         private void LateUpdate()
         {
-            // Keep camera rect stable if something else resets it.
             ApplyCameraRect();
+            EnsureUpperClearCamera();
+            EnsureUpperBandBackground();
+        }
+
+        private void OnDestroy()
+        {
+            // Make sure leftover desktop-key mode is off if an older build enabled it.
+            Game.Core.DesktopTransparency.Disable();
+            if (upperClearCamera != null)
+            {
+                Destroy(upperClearCamera.gameObject);
+                upperClearCamera = null;
+            }
         }
 
         public void EnsureApplied()
@@ -71,6 +95,8 @@ namespace Game.UI
                 return;
             }
 
+            Game.Core.DesktopTransparency.Disable();
+
             Game.Core.GameWindowBootstrap.ForceWindowed(
                 Game.Core.GameWindowBootstrap.WindowWidth,
                 Game.Core.GameWindowBootstrap.WindowHeight);
@@ -78,6 +104,8 @@ namespace Game.UI
             ApplyCanvasScaler();
             ResolveRefs();
             ApplyCameraRect();
+            EnsureUpperClearCamera();
+            EnsureUpperBandBackground();
             LayoutBattleHudBand();
         }
 
@@ -132,6 +160,15 @@ namespace Game.UI
             {
                 battleResultPanel = FindRect(canvas, "BattleResultPanel");
             }
+
+            if (upperBandImage == null)
+            {
+                Transform existing = canvas.Find("UpperBandBackground");
+                if (existing != null)
+                {
+                    upperBandImage = existing.GetComponent<Image>();
+                }
+            }
         }
 
         private void ApplyCameraRect()
@@ -146,12 +183,81 @@ namespace Game.UI
                 return;
             }
 
-            // Bottom strip: height 320 / 960 of the screen.
-            Rect target = new Rect(0f, 0f, 1f, BattleHeightNormalized);
-            if (battleCamera.rect != target)
+            // Bottom 320px only. Clear Flags left alone (your Inspector setting).
+            battleCamera.rect = new Rect(0f, 0f, 1f, BattleHeightNormalized);
+        }
+
+        /// <summary>
+        /// Battle camera only clears its bottom rect. Without this, closing Overlay UI leaves
+        /// smeared pixels in the uncleared upper framebuffer (inventory ghost).
+        /// </summary>
+        private void EnsureUpperClearCamera()
+        {
+            if (upperClearCamera == null)
             {
-                battleCamera.rect = target;
+                GameObject existing = GameObject.Find(UpperClearCameraName);
+                if (existing != null)
+                {
+                    upperClearCamera = existing.GetComponent<Camera>();
+                }
             }
+
+            if (upperClearCamera == null)
+            {
+                GameObject go = new GameObject(UpperClearCameraName);
+                upperClearCamera = go.AddComponent<Camera>();
+            }
+
+            float battleDepth = battleCamera != null ? battleCamera.depth : 0f;
+            upperClearCamera.depth = battleDepth - 1f;
+            upperClearCamera.clearFlags = CameraClearFlags.SolidColor;
+            upperClearCamera.backgroundColor = new Color(upperBandTint.r, upperBandTint.g, upperBandTint.b, 1f);
+            upperClearCamera.cullingMask = 0;
+            upperClearCamera.orthographic = true;
+            upperClearCamera.orthographicSize = 1f;
+            upperClearCamera.nearClipPlane = 0.1f;
+            upperClearCamera.farClipPlane = 10f;
+            upperClearCamera.allowHDR = false;
+            upperClearCamera.allowMSAA = false;
+            upperClearCamera.rect = new Rect(0f, BattleHeightNormalized, 1f, UpperBandHeightNormalized);
+            upperClearCamera.enabled = true;
+        }
+
+        private void EnsureUpperBandBackground()
+        {
+            Transform canvas = transform;
+            if (upperBandImage == null)
+            {
+                Transform existing = canvas.Find("UpperBandBackground");
+                if (existing != null)
+                {
+                    upperBandImage = existing.GetComponent<Image>();
+                }
+            }
+
+            if (upperBandImage == null)
+            {
+                GameObject go = new GameObject("UpperBandBackground", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+                go.transform.SetParent(canvas, false);
+                upperBandImage = go.GetComponent<Image>();
+            }
+
+            RectTransform rt = upperBandImage.rectTransform;
+            // Top 640px of the 960 canvas (everything above the battle band).
+            rt.anchorMin = new Vector2(0f, BattleHeight / CanvasSize);
+            rt.anchorMax = new Vector2(1f, 1f);
+            rt.offsetMin = Vector2.zero;
+            rt.offsetMax = Vector2.zero;
+            rt.localScale = Vector3.one;
+            rt.SetAsFirstSibling(); // Behind inventory / HUD
+
+            upperBandImage.raycastTarget = false;
+            upperBandImage.type = Image.Type.Simple;
+            upperBandImage.preserveAspect = false;
+            // Opaque fill — transparent Empty.png cannot cover framebuffer ghosts.
+            upperBandImage.sprite = null;
+            upperBandImage.color = new Color(upperBandTint.r, upperBandTint.g, upperBandTint.b, 1f);
+            upperBandImage.enabled = true;
         }
 
         private void LayoutBattleHudBand()
@@ -172,7 +278,6 @@ namespace Game.UI
 
             if (sitOnTopOfBand)
             {
-                // HUD bar along the top edge of the 320px battle band.
                 rt.anchorMin = new Vector2(0f, 0f);
                 rt.anchorMax = new Vector2(1f, 0f);
                 rt.pivot = new Vector2(0.5f, 1f);
@@ -211,7 +316,6 @@ namespace Game.UI
             Transform t = root.Find(name);
             if (t == null)
             {
-                // May live under canvas root with different hierarchy depth.
                 Transform[] all = root.GetComponentsInChildren<Transform>(true);
                 for (int i = 0; i < all.Length; i++)
                 {
